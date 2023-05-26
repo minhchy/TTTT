@@ -1,0 +1,99 @@
+[
+    {
+        "model-name": "chi_tiet_don_xuat",
+        "resource-file": "chi_tiet_don_xuats.json"
+    },
+    {
+        "model-name": "chuc_vu",
+        "resource-file": "chuc_vus.json"
+    },
+    {
+        "model-name": "don_vi",
+        "resource-file": "don_vis.json"
+    },
+    {
+        "model-name": "hang_hoa",
+        "resource-file": "hang_hoas.json"
+    },
+    {
+        "model-name": "huyen",
+        "resource-file": "huyens.json"
+    },
+    {
+        "model-name": "khach_hang",
+        "resource-file": "khach_hangs.json"
+    },
+    {
+        "model-name": "id_khohang",
+        "resource-file": "id_khohangs.json"
+    },
+    {
+        "model-name": "loai_hang_hoa",
+        "resource-file": "loai_hang_hoas.json"
+    },
+    {
+        "model-name": "loai_phuong_tien",
+        "resource-file": "loai_phuong_tiens.json"
+    },
+    {
+        "model-name": "nhanvien",
+        "resource-file": "nhanviens.json"
+    },
+    {
+        "model-name": "nhaphang",
+        "resource-file": "nhaphangs.json"
+    },
+    {
+        "model-name": "nha_cung_cap",
+        "resource-file": "nha_cung_caps.json"
+    },
+    {
+        "model-name": "phuong_tien",
+        "resource-file": "phuong_tiens.json"
+    },
+    {
+        "model-name": "pt_hh",
+        "resource-file": "pt_hhs.json"
+    },
+    {
+        "model-name": "thuoc_kho_hang",
+        "resource-file": "thuoc_kho_hangs.json"
+    },
+    {
+        "model-name": "tinh_tp",
+        "resource-file": "tinh_tps.json"
+    },
+    {
+        "model-name": "trang_thai",
+        "resource-file": "trang_thais.json"
+    },
+    {
+        "model-name": "trang_thai_phuong_tien",
+        "resource-file": "trang_thai_phuong_tiens.json"
+    },
+    {
+        "model-name": "xa",
+        "resource-file": "xas.json"
+    },
+    {
+        "model-name": "xuat_hang",
+        "resource-file": "xuat_hangs.json"
+    },
+    {
+        "model-name": "student",
+        "resource-file": "students.json",
+        "table-name": "students"
+    },
+    {
+        "model-name": "kho_hang",
+        "resource-file": "kho_hangs.json"
+    },
+    {
+        "model-name": "nhan_vien",
+        "resource-file": "nhan_viens.json"
+    },
+    {
+        "model-name": "nhap_hang",
+        "resource-file": "nhap_hangs.json"
+    }
+]
