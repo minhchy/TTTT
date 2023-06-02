@@ -7,13 +7,7 @@
     </div>
 </div>
 
-<!-- <div class="form-group {{ $errors->has('id_chucvu') ? 'has-error' : '' }}">
-    <label for="id_chucvu" class="col-md-2 control-label">Id Chucvu</label>
-    <div class="col-md-10">
-        <input class="form-control" name="id_chucvu" type="text" id="id_chucvu" value="{{ old('id_chucvu', optional($nhanVien)->id_chucvu) }}" minlength="1" placeholder="Enter id chucvu here...">
-        {!! $errors->first('id_chucvu', '<p class="help-block">:message</p>') !!}
-    </div>
-</div> -->
+
 <div class="form-group">
     <label for="id_chucvu" class="col-md-4 control-label">Chức vụ</label>
     <div class="col-md-6">
@@ -24,6 +18,7 @@
         </select>
     </div>
 </div>
+
 <div class="form-group {{ $errors->has('phone_nv') ? 'has-error' : '' }}">
     <label for="phone_nv" class="col-md-2 control-label">Phone Nv</label>
     <div class="col-md-10">

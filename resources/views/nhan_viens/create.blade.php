@@ -1,4 +1,5 @@
 @extends('layout')
+
 <?php include(app_path().'/includes/header.php');?>
 <?php include(app_path().'/includes/sidebar.php');?>
 @section('content')

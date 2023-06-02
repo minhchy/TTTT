@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\nhan_vien;
 use App\Models\chuc_vu;
+
 use Illuminate\Http\Request;
 use Exception;
 
@@ -32,6 +33,7 @@ class NhanViensController extends Controller
     {
         $chucVuList = chuc_vu::pluck('ten_chucvu', 'id_chucvu');
         return view('nhan_viens.create', ['chucVuList' => $chucVuList]);
+
     }
 
     /**

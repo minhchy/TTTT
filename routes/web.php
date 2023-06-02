@@ -45,6 +45,20 @@ Route::group([
  ], function () {
      Route::get('/lay_ds_chuc_vu', [ApiController::class, 'lay_ds_chuc_vu'])->name('ApiController.lay_ds_chuc_vu');
      Route::get('/lay_ds_nhan_vien', [ApiController::class, 'lay_ds_nhan_vien'])->name('ApiController.lay_ds_nhan_vien');
+     Route::get('/lay_ds_don_vi', [ApiController::class, 'lay_ds_don_vi'])->name('ApiController.lay_ds_don_vi');
+     Route::get('/lay_ds_hang_hoa', [ApiController::class, 'lay_ds_hang_hoa'])->name('ApiController.lay_ds_hang_hoa');
+     Route::get('/lay_ds_khach_hang', [ApiController::class, 'lay_ds_khach_hang'])->name('ApiController.lay_ds_khach_hang');
+     Route::get('/lay_ds_nha_cung_cap', [ApiController::class, 'lay_ds_nha_cung_cap'])->name('ApiController.lay_ds_nha_cung_cap');
+     Route::get('/lay_ds_phuong_tien', [ApiController::class, 'lay_ds_phuong_tien'])->name('ApiController.lay_ds_phuong_tien');
+     Route::get('/lay_ds_trang_thai', [ApiController::class, 'lay_ds_trang_thai'])->name('ApiController.lay_ds_trang_thai');
+     Route::get('/lay_ds_tinh_tp', [ApiController::class, 'lay_ds_tinh_tp'])->name('ApiController.lay_ds_tinh_tp');
+     Route::get('/lay_ds_trang_thai_phuong_tien', [ApiController::class, 'lay_ds_trang_thai_phuong_tien'])->name('ApiController.lay_ds_trang_thai_phuong_tien');
+     Route::get('/lay_ds_xa', [ApiController::class, 'lay_ds_xa'])->name('ApiController.lay_ds_xa');
+     Route::get('/lay_ds_xuat_hang', [ApiController::class, 'lay_ds_xuat_hang'])->name('ApiController.lay_ds_xuat_hang');
+     Route::get('/lay_ds_loai_hang_hoa', [ApiController::class, 'lay_ds_loai_hang_hoa'])->name('ApiController.lay_ds_loai_hang_hoa');
+     Route::get('/lay_ds_kho_hang', [ApiController::class, 'lay_ds_kho_hang'])->name('ApiController.lay_ds_kho_hang');
+     Route::get('/lay_ds_chi_tiet_don_xuat', [ApiController::class, 'lay_ds_chi_tiet_don_xuat'])->name('ApiController.lay_ds_chi_tiet_don_xuat');
+     Route::get('/lay_ds_chi_tiet_don_nhap', [ApiController::class, 'lay_ds_chi_tiet_don_nhap'])->name('ApiController.lay_ds_chi_tiet_don_nhap');
  });
  
 Route::group([
