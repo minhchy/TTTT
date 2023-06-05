@@ -52,22 +52,22 @@
                     <tbody>
                     @foreach($phuongTiens as $phuongTien)
                         <tr>
-                            <td>{{ $phuongTien->id_pt }}</td>
-                            <td>{{ $phuongTien->id_ttpt }}</td>
-                            <td>{{ $phuongTien->id_lpt }}</td>
-                            <td>{{ $phuongTien->ten_pt }}</td>
+                            <td>{{ $phuongTien->ID_PT }}</td>
+                            <td>{{ $phuongTien->ID_TTPT }}</td>
+                            <td>{{ $phuongTien->ID_LPT }}</td>
+                            <td>{{ $phuongTien->TEN_PT }}</td>
 
                             <td>
 
-                                <form method="POST" action="{!! route('phuong_tiens.phuong_tien.destroy', $phuongTien->id_pt) !!}" accept-charset="UTF-8">
+                                <form method="POST" action="{!! route('phuong_tiens.phuong_tien.destroy', $phuongTien->ID_PT) !!}" accept-charset="UTF-8">
                                 <input name="_method" value="DELETE" type="hidden">
                                 {{ csrf_field() }}
 
                                     <div class="btn-group btn-group-xs pull-right" role="group">
-                                        <a href="{{ route('phuong_tiens.phuong_tien.show', $phuongTien->id_pt ) }}" class="btn btn-info" title="Show Phuong Tien">
+                                        <a href="{{ route('phuong_tiens.phuong_tien.show', $phuongTien->ID_PT ) }}" class="btn btn-info" title="Show Phuong Tien">
                                             <span class="glyphicon glyphicon-open" aria-hidden="true"></span>
                                         </a>
-                                        <a href="{{ route('phuong_tiens.phuong_tien.edit', $phuongTien->id_pt ) }}" class="btn btn-primary" title="Edit Phuong Tien">
+                                        <a href="{{ route('phuong_tiens.phuong_tien.edit', $phuongTien->ID_PT ) }}" class="btn btn-primary" title="Edit Phuong Tien">
                                             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                                         </a>
 

@@ -21,6 +21,7 @@ class khach_hang extends Model
     * @var string
     */
     protected $primaryKey = 'id_kh';
+    public $timestamps = false;
     protected $keyType = 'string';
     public $incrementing = false;
 
@@ -35,7 +36,8 @@ class khach_hang extends Model
                   'ten_kh',
                   'phone_kh',
                   'email_kh',
-                  'address_kh'
+                  'address_kh',
+                  'password_kh'
               ];
 
     /**

@@ -52,22 +52,22 @@
                     <tbody>
                     @foreach($chiTietDonNhaps as $chiTietDonNhap)
                         <tr>
-                            <td>{{ $chiTietDonNhap->id_hh }}</td>
-                            <td>{{ $chiTietDonNhap->id_nh }}</td>
-                            <td>{{ $chiTietDonNhap->soluong_ctdn }}</td>
-                            <td>{{ $chiTietDonNhap->dongia_ctdn }}</td>
+                            <td>{{ $chiTietDonNhap->ID_HH }}</td>
+                            <td>{{ $chiTietDonNhap->ID_NH }}</td>
+                            <td>{{ $chiTietDonNhap->SOLUONG_CTDN }}</td>
+                            <td>{{ $chiTietDonNhap->DONGIA_CTDN }}</td>
 
                             <td>
 
-                                <form method="POST" action="{!! route('chi_tiet_don_nhaps.chi_tiet_don_nhap.destroy', $chiTietDonNhap->id_hh) !!}" accept-charset="UTF-8">
+                                <form method="POST" action="{!! route('chi_tiet_don_nhaps.chi_tiet_don_nhap.destroy', $chiTietDonNhap->ID_HH) !!}" accept-charset="UTF-8">
                                 <input name="_method" value="DELETE" type="hidden">
                                 {{ csrf_field() }}
 
                                     <div class="btn-group btn-group-xs pull-right" role="group">
-                                        <a href="{{ route('chi_tiet_don_nhaps.chi_tiet_don_nhap.show', $chiTietDonNhap->id_hh ) }}" class="btn btn-info" title="Show Chi Tiet Don Nhap">
+                                        <a href="{{ route('chi_tiet_don_nhaps.chi_tiet_don_nhap.show', $chiTietDonNhap->ID_HH ) }}" class="btn btn-info" title="Show Chi Tiet Don Nhap">
                                             <span class="glyphicon glyphicon-open" aria-hidden="true"></span>
                                         </a>
-                                        <a href="{{ route('chi_tiet_don_nhaps.chi_tiet_don_nhap.edit', $chiTietDonNhap->id_hh ) }}" class="btn btn-primary" title="Edit Chi Tiet Don Nhap">
+                                        <a href="{{ route('chi_tiet_don_nhaps.chi_tiet_don_nhap.edit', $chiTietDonNhap->ID_HH ) }}" class="btn btn-primary" title="Edit Chi Tiet Don Nhap">
                                             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                                         </a>
 

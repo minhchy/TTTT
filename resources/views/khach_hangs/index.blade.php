@@ -53,11 +53,11 @@
                     <tbody>
                     @foreach($khachHangs as $khachHang)
                         <tr>
-                            <td>{{ $khachHang->id_kh }}</td>
-                            <td>{{ $khachHang->ten_kh }}</td>
-                            <td>{{ $khachHang->phone_kh }}</td>
-                            <td>{{ $khachHang->email_kh }}</td>
-                            <td>{{ $khachHang->address_kh }}</td>
+                            <td>{{ $khachHang->ID_KH }}</td>
+                            <td>{{ $khachHang->TEN_KH }}</td>
+                            <td>{{ $khachHang->PHONE_KH }}</td>
+                            <td>{{ $khachHang->EMAIL_KH }}</td>
+                            <td>{{ $khachHang->ADDRESS_KH }}</td>
 
                             <td>
 
@@ -66,10 +66,10 @@
                                 {{ csrf_field() }}
 
                                     <div class="btn-group btn-group-xs pull-right" role="group">
-                                        <a href="{{ route('khach_hangs.khach_hang.show', $khachHang->id_kh ) }}" class="btn btn-info" title="Show Khach Hang">
+                                        <a href="{{ route('khach_hangs.khach_hang.show', $khachHang->ID_KH ) }}" class="btn btn-info" title="Show Khach Hang">
                                             <span class="glyphicon glyphicon-open" aria-hidden="true"></span>
                                         </a>
-                                        <a href="{{ route('khach_hangs.khach_hang.edit', $khachHang->id_kh ) }}" class="btn btn-primary" title="Edit Khach Hang">
+                                        <a href="{{ route('khach_hangs.khach_hang.edit', $khachHang->ID_KH ) }}" class="btn btn-primary" title="Edit Khach Hang">
                                             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                                         </a>
 

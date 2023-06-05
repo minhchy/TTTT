@@ -50,20 +50,20 @@
                     <tbody>
                     @foreach($chucVus as $chucVu)
                         <tr>
-                            <td>{{ $chucVu->id_chucvu }}</td>
-                            <td>{{ $chucVu->ten_chucvu }}</td>
+                            <td>{{ $chucVu->ID_CHUCVU }}</td>
+                            <td>{{ $chucVu->TEN_CHUCVU }}</td>
 
                             <td>
 
-                                <form method="POST" action="{!! route('chuc_vus.chuc_vu.destroy', $chucVu->id_chucvu) !!}" accept-charset="UTF-8">
+                                <form method="POST" action="{!! route('chuc_vus.chuc_vu.destroy', $chucVu->ID_CHUCVU) !!}" accept-charset="UTF-8">
                                 <input name="_method" value="DELETE" type="hidden">
                                 {{ csrf_field() }}
 
                                     <div class="btn-group btn-group-xs pull-right" role="group">
-                                        <a href="{{ route('chuc_vus.chuc_vu.show', $chucVu->id_chucvu ) }}" class="btn btn-info" title="Show Chuc Vu">
+                                        <a href="{{ route('chuc_vus.chuc_vu.show', $chucVu->ID_CHUCVU ) }}" class="btn btn-info" title="Show Chuc Vu">
                                             <span class="glyphicon glyphicon-open" aria-hidden="true"></span>
                                         </a>
-                                        <a href="{{ route('chuc_vus.chuc_vu.edit', $chucVu->id_chucvu ) }}" class="btn btn-primary" title="Edit Chuc Vu">
+                                        <a href="{{ route('chuc_vus.chuc_vu.edit', $chucVu->ID_CHUCVU ) }}" class="btn btn-primary" title="Edit Chuc Vu">
                                             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                                         </a>
 
@@ -71,7 +71,7 @@
                                             <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
                                         </button>
                                         <!-- Nút edit -->
-                                        <button type="button" onclick="window.location='{{ route('chuc_vus.chuc_vu.edit', $chucVu->id_chucvu) }}'" class="btn btn-primary" title="Edit Chuc Vu">
+                                        <button type="button" onclick="window.location='{{ route('chuc_vus.chuc_vu.edit', $chucVu->ID_CHUCVU) }}'" class="btn btn-primary" title="Edit Chuc Vu">
                                             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Edit
                                         </button>
 

@@ -52,7 +52,7 @@ class KhachHangsController extends Controller
             return redirect()->route('khach_hangs.khach_hang.index')
                 ->with('success_message', 'Khach Hang was successfully added.');
         } catch (Exception $exception) {
-
+            var_dump($exception);
             return back()->withInput()
                 ->withErrors(['unexpected_error' => 'Unexpected error occurred while trying to process your request.']);
         }
@@ -150,6 +150,7 @@ class KhachHangsController extends Controller
             'phone_kh' => 'string|min:1|nullable',
             'email_kh' => 'nullable',
             'address_kh' => 'string|min:1|nullable', 
+            'password_kh' => 'string|min:1|nullable', 
         ];
 
         

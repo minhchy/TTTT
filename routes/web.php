@@ -59,7 +59,12 @@ Route::group([
      Route::get('/lay_ds_kho_hang', [ApiController::class, 'lay_ds_kho_hang'])->name('ApiController.lay_ds_kho_hang');
      Route::get('/lay_ds_chi_tiet_don_xuat', [ApiController::class, 'lay_ds_chi_tiet_don_xuat'])->name('ApiController.lay_ds_chi_tiet_don_xuat');
      Route::get('/lay_ds_chi_tiet_don_nhap', [ApiController::class, 'lay_ds_chi_tiet_don_nhap'])->name('ApiController.lay_ds_chi_tiet_don_nhap');
- });
+     Route::post('/dang_ky_tai_khoan', [ApiController::class, 'dang_ky_tai_khoan'])->name('ApiController.dang_ky_tai_khoan');
+     Route::post('/dang_nhap_tai_khoan', [ApiController::class, 'dang_nhap_tai_khoan'])->name('ApiController.dang_nhap_tai_khoan');
+     Route::get('/token', function () {
+          return csrf_token(); 
+      });
+});
  
 Route::group([
     'prefix' => 'chuc_vus',

@@ -50,20 +50,20 @@
                     <tbody>
                     @foreach($donVis as $donVi)
                         <tr>
-                            <td>{{ $donVi->id_dv }}</td>
-                            <td>{{ $donVi->ten_dv }}</td>
+                            <td>{{ $donVi->ID_DV }}</td>
+                            <td>{{ $donVi->TEN_DV }}</td>
 
                             <td>
 
-                                <form method="POST" action="{!! route('don_vis.don_vi.destroy', $donVi->id_dv) !!}" accept-charset="UTF-8">
+                                <form method="POST" action="{!! route('don_vis.don_vi.destroy', $donVi->ID_DV) !!}" accept-charset="UTF-8">
                                 <input name="_method" value="DELETE" type="hidden">
                                 {{ csrf_field() }}
 
                                     <div class="btn-group btn-group-xs pull-right" role="group">
-                                        <a href="{{ route('don_vis.don_vi.show', $donVi->id_dv ) }}" class="btn btn-info" title="Show Don Vi">
+                                        <a href="{{ route('don_vis.don_vi.show', $donVi->ID_DV ) }}" class="btn btn-info" title="Show Don Vi">
                                             <span class="glyphicon glyphicon-open" aria-hidden="true"></span>
                                         </a>
-                                        <a href="{{ route('don_vis.don_vi.edit', $donVi->id_dv ) }}" class="btn btn-primary" title="Edit Don Vi">
+                                        <a href="{{ route('don_vis.don_vi.edit', $donVi->ID_DV ) }}" class="btn btn-primary" title="Edit Don Vi">
                                             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                                         </a>
 

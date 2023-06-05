@@ -54,24 +54,24 @@
                     <tbody>
                     @foreach($nhapHangs as $nhapHang)
                         <tr>
-                            <td>{{ $nhapHang->id_nh }}</td>
-                            <td>{{ $nhapHang->id_tt }}</td>
-                            <td>{{ $nhapHang->id_ncc }}</td>
-                            <td>{{ $nhapHang->id_nv }}</td>
-                            <td>{{ $nhapHang->time_nh }}</td>
-                            <td>{{ $nhapHang->tongtien_nh }}</td>
+                            <td>{{ $nhapHang->ID_NH }}</td>
+                            <td>{{ $nhapHang->ID_TT }}</td>
+                            <td>{{ $nhapHang->ID_NCC }}</td>
+                            <td>{{ $nhapHang->ID_NV }}</td>
+                            <td>{{ $nhapHang->TIME_NH }}</td>
+                            <td>{{ $nhapHang->TONGTIEN_NH }}</td>
 
                             <td>
 
-                                <form method="POST" action="{!! route('nhap_hangs.nhap_hang.destroy', $nhapHang->id_nh) !!}" accept-charset="UTF-8">
+                                <form method="POST" action="{!! route('nhap_hangs.nhap_hang.destroy', $nhapHang->ID_NH) !!}" accept-charset="UTF-8">
                                 <input name="_method" value="DELETE" type="hidden">
                                 {{ csrf_field() }}
 
                                     <div class="btn-group btn-group-xs pull-right" role="group">
-                                        <a href="{{ route('nhap_hangs.nhap_hang.show', $nhapHang->id_nh ) }}" class="btn btn-info" title="Show Nhap Hang">
+                                        <a href="{{ route('nhap_hangs.nhap_hang.show', $nhapHang->ID_NH ) }}" class="btn btn-info" title="Show Nhap Hang">
                                             <span class="glyphicon glyphicon-open" aria-hidden="true"></span>
                                         </a>
-                                        <a href="{{ route('nhap_hangs.nhap_hang.edit', $nhapHang->id_nh ) }}" class="btn btn-primary" title="Edit Nhap Hang">
+                                        <a href="{{ route('nhap_hangs.nhap_hang.edit', $nhapHang->ID_NH ) }}" class="btn btn-primary" title="Edit Nhap Hang">
                                             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                                         </a>
 

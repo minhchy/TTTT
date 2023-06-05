@@ -50,20 +50,20 @@
                     <tbody>
                     @foreach($loaiPhuongTiens as $loaiPhuongTien)
                         <tr>
-                            <td>{{ $loaiPhuongTien->id_lpt }}</td>
-                            <td>{{ $loaiPhuongTien->ten_lpt }}</td>
+                            <td>{{ $loaiPhuongTien->ID_LPT }}</td>
+                            <td>{{ $loaiPhuongTien->TEN_LPT }}</td>
 
                             <td>
 
-                                <form method="POST" action="{!! route('loai_phuong_tiens.loai_phuong_tien.destroy', $loaiPhuongTien->id_lpt) !!}" accept-charset="UTF-8">
+                                <form method="POST" action="{!! route('loai_phuong_tiens.loai_phuong_tien.destroy', $loaiPhuongTien->ID_LPT) !!}" accept-charset="UTF-8">
                                 <input name="_method" value="DELETE" type="hidden">
                                 {{ csrf_field() }}
 
                                     <div class="btn-group btn-group-xs pull-right" role="group">
-                                        <a href="{{ route('loai_phuong_tiens.loai_phuong_tien.show', $loaiPhuongTien->id_lpt ) }}" class="btn btn-info" title="Show Loai Phuong Tien">
+                                        <a href="{{ route('loai_phuong_tiens.loai_phuong_tien.show', $loaiPhuongTien->ID_LPT ) }}" class="btn btn-info" title="Show Loai Phuong Tien">
                                             <span class="glyphicon glyphicon-open" aria-hidden="true"></span>
                                         </a>
-                                        <a href="{{ route('loai_phuong_tiens.loai_phuong_tien.edit', $loaiPhuongTien->id_lpt ) }}" class="btn btn-primary" title="Edit Loai Phuong Tien">
+                                        <a href="{{ route('loai_phuong_tiens.loai_phuong_tien.edit', $loaiPhuongTien->ID_LPT ) }}" class="btn btn-primary" title="Edit Loai Phuong Tien">
                                             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                                         </a>
 

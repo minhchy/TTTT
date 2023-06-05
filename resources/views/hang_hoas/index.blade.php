@@ -55,25 +55,25 @@
                     <tbody>
                     @foreach($hangHoas as $hangHoa)
                         <tr>
-                            <td>{{ $hangHoa->id_hh }}</td>
-                            <td>{{ $hangHoa->id_lhh }}</td>
-                            <td>{{ $hangHoa->id_dv }}</td>
-                            <td>{{ $hangHoa->ten_hh }}</td>
-                            <td>{{ $hangHoa->gia_mua_hh }}</td>
-                            <td>{{ $hangHoa->gia_ban_hh }}</td>
-                            <td>{{ $hangHoa->soluong_hh }}</td>
+                            <td>{{ $hangHoa->ID_HH }}</td>
+                            <td>{{ $hangHoa->ID_LHH }}</td>
+                            <td>{{ $hangHoa->ID_DV }}</td>
+                            <td>{{ $hangHoa->TEN_HH }}</td>
+                            <td>{{ $hangHoa->GIA_MUA_HH }}</td>
+                            <td>{{ $hangHoa->GIA_BAN_HH }}</td>
+                            <td>{{ $hangHoa->SOLUONG_HH }}</td>
 
                             <td>
 
-                                <form method="POST" action="{!! route('hang_hoas.hang_hoa.destroy', $hangHoa->id_hh) !!}" accept-charset="UTF-8">
+                                <form method="POST" action="{!! route('hang_hoas.hang_hoa.destroy', $hangHoa->ID_HH) !!}" accept-charset="UTF-8">
                                 <input name="_method" value="DELETE" type="hidden">
                                 {{ csrf_field() }}
 
                                     <div class="btn-group btn-group-xs pull-right" role="group">
-                                        <a href="{{ route('hang_hoas.hang_hoa.show', $hangHoa->id_hh ) }}" class="btn btn-info" title="Show Hang Hoa">
+                                        <a href="{{ route('hang_hoas.hang_hoa.show', $hangHoa->ID_HH ) }}" class="btn btn-info" title="Show Hang Hoa">
                                             <span class="glyphicon glyphicon-open" aria-hidden="true"></span>
                                         </a>
-                                        <a href="{{ route('hang_hoas.hang_hoa.edit', $hangHoa->id_hh ) }}" class="btn btn-primary" title="Edit Hang Hoa">
+                                        <a href="{{ route('hang_hoas.hang_hoa.edit', $hangHoa->ID_HH ) }}" class="btn btn-primary" title="Edit Hang Hoa">
                                             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                                         </a>
 

@@ -18,6 +18,7 @@ use App\Models\kho_hang;
 use App\Models\chi_tiet_don_nhap;
 use App\Models\chi_tiet_don_xuat;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class ApiController extends Controller
 {
@@ -132,5 +133,60 @@ class ApiController extends Controller
         return response([
             'data' => $data
         ]);
+    }
+    public function dang_nhap_tai_khoan(Request $request)
+    {
+        // Lấy thông tin từ request
+        $email = $request->input('EMAIL_KH');
+        $mat_khau = $request->input('PASSWORD_KH');
+        
+        // Kiểm tra thông tin đăng nhập
+        $khach_hang = khach_hang::where('email_kh', $email)->first();
+        if (!$khach_hang) {
+            return response([
+                'message' => 'Email không chính xác.'
+            ], 401);
+        }
+        if (!Hash::check($mat_khau, $khach_hang->PASSWORD_KH)) {
+            return response([
+                'message' => 'Mật khẩu không chính xác.'
+            ], 401);
+        }
+        // Đăng nhập thành công, tạo token cho người dùng
+        // $token = $khach_hang->createToken('access_token')->plainTextToken;
+
+        return response([
+            'message' => 'Đăng nhập thành công!',
+            // 'access_token' => $token
+        ], 200);
+    }
+
+    public function dang_ky_tai_khoan(Request $request)
+    {
+        // Lấy thông tin từ request
+        $ten_khach_hang = $request->input('TEN_KH');
+        $email = $request->input('EMAIL_KH');
+        $mat_khau = $request->input('PASSWORD_KH');
+
+        // Kiểm tra sự tồn tại của email trong cơ sở dữ liệu
+        $existingCustomer = khach_hang::where('email_kh', $email)->first();
+        if ($existingCustomer) {
+            return response([
+                'message' => 'Email đã tồn tại trong hệ thống.'
+            ], 400);
+        }
+
+        // Tạo mới đối tượng khách hàng
+        $khach_hang = new khach_hang();
+        $khach_hang->ten_kh = $ten_khach_hang;
+        $khach_hang->email_kh = $email;
+        $khach_hang->password_kh = bcrypt($mat_khau); // Hash mật khẩu trước khi lưu
+
+        // Lưu khách hàng vào cơ sở dữ liệu
+        $khach_hang->save();
+
+        return response([
+            'message' => 'Đăng ký tài khoản thành công!'
+        ], 200);
     }
 }

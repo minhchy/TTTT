@@ -50,20 +50,20 @@
                     <tbody>
                     @foreach($tinhTps as $tinhTp)
                         <tr>
-                            <td>{{ $tinhTp->id_tinh_tp }}</td>
-                            <td>{{ $tinhTp->ten_tinh_tp }}</td>
+                            <td>{{ $tinhTp->ID_TINH_TP }}</td>
+                            <td>{{ $tinhTp->TEN_TINH_TP }}</td>
 
                             <td>
 
-                                <form method="POST" action="{!! route('tinh_tps.tinh_tp.destroy', $tinhTp->id_tinh_tp) !!}" accept-charset="UTF-8">
+                                <form method="POST" action="{!! route('tinh_tps.tinh_tp.destroy', $tinhTp->ID_TINH_TP) !!}" accept-charset="UTF-8">
                                 <input name="_method" value="DELETE" type="hidden">
                                 {{ csrf_field() }}
 
                                     <div class="btn-group btn-group-xs pull-right" role="group">
-                                        <a href="{{ route('tinh_tps.tinh_tp.show', $tinhTp->id_tinh_tp ) }}" class="btn btn-info" title="Show Tinh Tp">
+                                        <a href="{{ route('tinh_tps.tinh_tp.show', $tinhTp->ID_TINH_TP ) }}" class="btn btn-info" title="Show Tinh Tp">
                                             <span class="glyphicon glyphicon-open" aria-hidden="true"></span>
                                         </a>
-                                        <a href="{{ route('tinh_tps.tinh_tp.edit', $tinhTp->id_tinh_tp ) }}" class="btn btn-primary" title="Edit Tinh Tp">
+                                        <a href="{{ route('tinh_tps.tinh_tp.edit', $tinhTp->ID_TINH_TP ) }}" class="btn btn-primary" title="Edit Tinh Tp">
                                             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                                         </a>
 

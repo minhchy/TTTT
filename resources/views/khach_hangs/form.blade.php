@@ -39,3 +39,10 @@
     </div>
 </div>
 
+<div class="form-group {{ $errors->has('password_kh') ? 'has-error' : '' }}">
+    <label for="password_kh" class="col-md-2 control-label">Password Kh</label>
+    <div class="col-md-10">
+        <input class="form-control" name="password_kh" type="password" id="password_kh" value="{{ old('password_kh', optional($khachHang)->password_kh) }}" placeholder="Enter password kh here...">
+        {!! $errors->first('password_kh', '<p class="help-block">:message</p>') !!}
+    </div>
+</div>

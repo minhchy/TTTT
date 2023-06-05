@@ -50,8 +50,8 @@
                     <tbody>
                     @foreach($khoHangs as $khoHang)
                         <tr>
-                            <td>{{ $khoHang->id_khohang }}</td>
-                            <td>{{ $khoHang->ten_khohang }}</td>
+                            <td>{{ $khoHang->ID_KHOHANG }}</td>
+                            <td>{{ $khoHang->TEN_KHOHANG }}</td>
 
                             <td>
 
@@ -60,10 +60,10 @@
                                 {{ csrf_field() }}
 
                                     <div class="btn-group btn-group-xs pull-right" role="group">
-                                        <a href="{{ route('kho_hangs.kho_hang.show', $khoHang->id_khohang ) }}" class="btn btn-info" title="Show Kho Hang">
+                                        <a href="{{ route('kho_hangs.kho_hang.show', $khoHang->ID_KHOHANG ) }}" class="btn btn-info" title="Show Kho Hang">
                                             <span class="glyphicon glyphicon-open" aria-hidden="true"></span>
                                         </a>
-                                        <a href="{{ route('kho_hangs.kho_hang.edit', $khoHang->id_khohang ) }}" class="btn btn-primary" title="Edit Kho Hang">
+                                        <a href="{{ route('kho_hangs.kho_hang.edit', $khoHang->ID_KHOHANG ) }}" class="btn btn-primary" title="Edit Kho Hang">
                                             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                                         </a>
 

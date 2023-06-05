@@ -51,21 +51,21 @@
                     <tbody>
                     @foreach($huyens as $huyen)
                         <tr>
-                            <td>{{ $huyen->id_huyen }}</td>
-                            <td>{{ $huyen->id_tinh }}</td>
-                            <td>{{ $huyen->ten_huyen }}</td>
+                            <td>{{ $huyen->ID_HUYEN }}</td>
+                            <td>{{ $huyen->ID_TINH }}</td>
+                            <td>{{ $huyen->TEN_HUYEN }}</td>
 
                             <td>
 
-                                <form method="POST" action="{!! route('huyens.huyen.destroy', $huyen->id_huyen) !!}" accept-charset="UTF-8">
+                                <form method="POST" action="{!! route('huyens.huyen.destroy', $huyen->ID_HUYEN) !!}" accept-charset="UTF-8">
                                 <input name="_method" value="DELETE" type="hidden">
                                 {{ csrf_field() }}
 
                                     <div class="btn-group btn-group-xs pull-right" role="group">
-                                        <a href="{{ route('huyens.huyen.show', $huyen->id_huyen ) }}" class="btn btn-info" title="Show Huyen">
+                                        <a href="{{ route('huyens.huyen.show', $huyen->ID_HUYEN ) }}" class="btn btn-info" title="Show Huyen">
                                             <span class="glyphicon glyphicon-open" aria-hidden="true"></span>
                                         </a>
-                                        <a href="{{ route('huyens.huyen.edit', $huyen->id_huyen ) }}" class="btn btn-primary" title="Edit Huyen">
+                                        <a href="{{ route('huyens.huyen.edit', $huyen->ID_HUYEN ) }}" class="btn btn-primary" title="Edit Huyen">
                                             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                                         </a>
 

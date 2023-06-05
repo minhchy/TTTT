@@ -51,21 +51,21 @@
                     <tbody>
                     @foreach($trangThais as $trangThai)
                         <tr>
-                            <td>{{ $trangThai->id_tt }}</td>
-                            <td>{{ $trangThai->id_xh }}</td>
-                            <td>{{ $trangThai->ten_tt }}</td>
+                            <td>{{ $trangThai->ID_TT }}</td>
+                            <td>{{ $trangThai->ID_XH }}</td>
+                            <td>{{ $trangThai->TEN_TT }}</td>
 
                             <td>
 
-                                <form method="POST" action="{!! route('trang_thais.trang_thai.destroy', $trangThai->id_tt) !!}" accept-charset="UTF-8">
+                                <form method="POST" action="{!! route('trang_thais.trang_thai.destroy', $trangThai->ID_TT) !!}" accept-charset="UTF-8">
                                 <input name="_method" value="DELETE" type="hidden">
                                 {{ csrf_field() }}
 
                                     <div class="btn-group btn-group-xs pull-right" role="group">
-                                        <a href="{{ route('trang_thais.trang_thai.show', $trangThai->id_tt ) }}" class="btn btn-info" title="Show Trang Thai">
+                                        <a href="{{ route('trang_thais.trang_thai.show', $trangThai->ID_TT ) }}" class="btn btn-info" title="Show Trang Thai">
                                             <span class="glyphicon glyphicon-open" aria-hidden="true"></span>
                                         </a>
-                                        <a href="{{ route('trang_thais.trang_thai.edit', $trangThai->id_tt ) }}" class="btn btn-primary" title="Edit Trang Thai">
+                                        <a href="{{ route('trang_thais.trang_thai.edit', $trangThai->ID_TT ) }}" class="btn btn-primary" title="Edit Trang Thai">
                                             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                                         </a>
 
